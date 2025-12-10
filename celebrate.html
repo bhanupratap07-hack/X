@@ -1,9 +1,9 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Light Up My Life</title>
+    <title>Happy Birthday Riya!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -28,20 +28,10 @@
         
         /* Balloon animation */
         @keyframes float-up {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
         }
         
         .balloon {
@@ -53,10 +43,7 @@
         }
         
         @media (min-width: 768px) {
-            .balloon {
-                width: 60px;
-                height: 80px;
-            }
+            .balloon { width: 60px; height: 80px; }
         }
         
         .balloon::after {
@@ -71,21 +58,13 @@
         }
         
         @media (min-width: 768px) {
-            .balloon::after {
-                height: 60px;
-            }
+            .balloon::after { height: 60px; }
         }
         
         /* Confetti animation */
         @keyframes confetti-fall {
-            0% {
-                transform: translateY(-100px) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh) rotate(360deg);
-                opacity: 0;
-            }
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
         }
         
         .confetti {
@@ -96,22 +75,13 @@
         }
         
         @media (min-width: 768px) {
-            .confetti {
-                width: 10px;
-                height: 10px;
-            }
+            .confetti { width: 10px; height: 10px; }
         }
         
         /* Heart rain animation */
         @keyframes heart-fall {
-            0% {
-                transform: translateY(-100px) rotate(0deg);
-                opacity: 0.8;
-            }
-            100% {
-                transform: translateY(100vh) rotate(360deg);
-                opacity: 0;
-            }
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 0.8; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
         }
         
         .heart {
@@ -122,14 +92,10 @@
         }
         
         @media (min-width: 768px) {
-            .heart {
-                width: 20px;
-                height: 18px;
-            }
+            .heart { width: 20px; height: 18px; }
         }
         
-        .heart::before,
-        .heart::after {
+        .heart::before, .heart::after {
             content: '';
             width: 8px;
             height: 12px;
@@ -142,13 +108,7 @@
         }
         
         @media (min-width: 768px) {
-            .heart::before,
-            .heart::after {
-                width: 10px;
-                height: 16px;
-                left: 10px;
-                border-radius: 10px 10px 0 0;
-            }
+            .heart::before, .heart::after { width: 10px; height: 16px; left: 10px; border-radius: 10px 10px 0 0; }
         }
         
         .heart::after {
@@ -159,54 +119,30 @@
         
         /* Banner slide animation */
         @keyframes slide-down {
-            0% {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            0% { transform: translateY(-100%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
         }
         
-        .banner {
-            animation: slide-down 1s ease-out;
-        }
+        .banner { animation: slide-down 1s ease-out; }
         
         /* Letter animation */
         @keyframes letter-appear {
-            0% {
-                opacity: 0;
-                transform: translateY(30px) scale(0.9);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
+            0% { opacity: 0; transform: translateY(30px) scale(0.9); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
         }
         
-        .letter-appear {
-            animation: letter-appear 1.5s ease-out;
-        }
+        .letter-appear { animation: letter-appear 1.5s ease-out; }
         
         /* Fade out animation */
         @keyframes fadeOut {
-            0% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
+            0% { opacity: 1; }
+            100% { opacity: 0; }
         }
         
-        .fade-out {
-            animation: fadeOut 1s ease-out forwards;
-        }
+        .fade-out { animation: fadeOut 1s ease-out forwards; }
         
         /* Background transition */
-        .bg-transition {
-            transition: background 2s ease-in-out;
-        }
+        .bg-transition { transition: background 2s ease-in-out; }
         
         /* Letter styling */
         .letter-paper {
@@ -218,6 +154,10 @@
         .letter-content {
             background: linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
         }
+        
+        /* Scrollbar hiding for clean look */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="min-h-screen bg-gray-900 bg-transition overflow-hidden" id="body">
@@ -245,26 +185,42 @@
         </div>
         
         <div id="letter-section" class="fixed inset-0 flex items-center justify-center p-4 sm:p-6 z-40 hidden">
-            <div class="letter-paper rounded-3xl p-6 sm:p-8 md:p-12 max-w-sm sm:max-w-md md:max-w-2xl w-full max-h-[80vh] overflow-y-auto letter-appear">
-                <div class="letter-content rounded-2xl p-4 sm:p-6 md:p-8">
-                    <div class="text-center mb-6 sm:mb-8">
-                        <h3 class="text-2xl sm:text-3xl md:text-4xl font-dancing text-purple-600 mb-2">
-                            Dear Riya 🥳💝,
+            <div class="letter-paper rounded-3xl p-6 sm:p-8 md:p-12 max-w-sm sm:max-w-md md:max-w-2xl w-full max-h-[85vh] overflow-y-auto no-scrollbar letter-appear">
+                <div class="letter-content rounded-2xl p-2 sm:p-4">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl sm:text-3xl md:text-4xl font-dancing text-purple-600 mb-2 font-bold">
+                            To My Dearest Riya 🥳💝
                         </h3>
                         <div class="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-pink-400 to-purple-400 mx-auto rounded-full"></div>
                     </div>
                     
-                    <div class="space-y-4 sm:space-y-6 text-gray-700 font-playfair">
-                        <p class="text-sm sm:text-base md:text-lg leading-relaxed">
-                            On this special day, I want to take a moment to celebrate not just your birthday, but the incredible person you are. Your presence lights up every room you enter, just like how you've lit up our lives.
+                    <div class="space-y-4 text-gray-700 font-playfair text-left">
+                        <p class="text-sm sm:text-base leading-relaxed">
+                            Happy Birthday to my incredible Riya! 🎉 You are truly the bestest friend a person could ask for, and you feel exactly like the sister who loves to tease me 😜 and then instantly switch to caring for me. Thank you for being the perfect mix of a best friend and family! 🫂
                         </p>
                         
-                        <p class="text-sm sm:text-base md:text-lg leading-relaxed">
-                            Your kindness, wisdom, and beautiful spirit inspire everyone around you. You have this magical way of making ordinary moments feel extraordinary, and today is all about celebrating the magic that is uniquely you.
+                        <p class="text-sm sm:text-base leading-relaxed">
+                            It's funny, I still remember the first time I met you in school—and those memories of us being Class Monitors together? 🤓 Pure gold! I truly enjoyed every single one of them.
                         </p>
                         
-                        <p class="text-sm sm:text-base md:text-lg leading-relaxed">
-                            May this new year of your life be filled with endless joy, beautiful surprises, and all the happiness your heart can hold. You deserve nothing but the very best that life has to offer.
+                        <p class="text-sm sm:text-base leading-relaxed">
+                            What’s even crazier is that after a whole decade apart, the way we reconnected in the last 2-3 months felt like no time had passed at all. We just picked up right where we left off—enjoying, teasing, and sharing endless advice and reels. 😂 Thank you for never making me feel that distance; that's a gift only a true soul sister can give. 🎁
+                        </p>
+
+                        <p class="text-sm sm:text-base leading-relaxed">
+                            Knowing I have your steady, kind, and brilliant heart in my life gives me so much comfort. Just promise me this: No matter the time, no matter the reason, if you ever, ever need me, call me 📞 or text me 💬. I will be available for you at any time. You are my forever bestest friend, and I truly hope I am yours, too. 🤞
+                        </p>
+
+                        <p class="text-sm sm:text-base leading-relaxed">
+                            I know you have big papers coming up, so please prep well! 📚 Remember that school topper who aced every class? That's you, Riya! Believe in yourself and have the courage to tackle anything—I know you can do it. 💪 Seeing you grow and chase your dreams is honestly the most inspiring thing. ✨
+                        </p>
+
+                        <p class="text-sm sm:text-base leading-relaxed">
+                            You deserve every single amazing thing coming your way this year. I promise, I'll see you for sure next time in the summer vacation! ✈️
+                        </p>
+
+                        <p class="text-sm sm:text-base leading-relaxed">
+                            Never stop being the awesome, slightly chaotic, and totally beautiful soul that you are. Love you always and forever! Go celebrate like the queen you are! 👑💖
                         </p>
                         
                         <div class="text-center mt-6 sm:mt-8">
@@ -272,24 +228,22 @@
                                 Wishing you the most wonderful birthday! 🎂✨
                             </p>
                         </div>
-                    </div>
-                    
-                    <div class="text-center mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-pink-200">
-                        <p class="text-sm sm:text-base md:text-lg font-dancing text-purple-600">
-                            With love and warm wishes,
-                        </p>
-                        <p class="text-base sm:text-lg md:text-xl font-dancing text-pink-600 font-bold mt-2">
-                            Someone who cares about you 💕
-                        </p>
+
+                        <div class="text-center mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-pink-200">
+                            <p class="text-sm sm:text-base md:text-lg font-dancing text-purple-600">
+                                With love and warm wishes,
+                            </p>
+                            <p class="text-base sm:text-lg md:text-xl font-dancing text-pink-600 font-bold mt-2">
+                                Best, Teri Saheli 😜🥳🫶
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
         <div id="balloons-container" class="fixed inset-0 pointer-events-none z-20"></div>
-        
         <div id="confetti-container" class="fixed inset-0 pointer-events-none z-30"></div>
-        
         <div id="hearts-container" class="fixed inset-0 pointer-events-none z-10"></div>
     </div>
 
@@ -361,14 +315,14 @@
                 setTimeout(() => {
                     balloon.remove();
                 }, 8000);
-            }, 1200); // Reduced frequency for mobile
+            }, 1200);
         }
 
         function startConfetti() {
             const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#f9ca24', '#6c5ce7', '#fd79a8', '#00b894', '#fdcb6e'];
             
             setInterval(() => {
-                const confettiCount = window.innerWidth < 768 ? 3 : 5; // Fewer confetti on mobile
+                const confettiCount = window.innerWidth < 768 ? 3 : 5;
                 for (let i = 0; i < confettiCount; i++) {
                     const confetti = document.createElement('div');
                     confetti.className = 'confetti';
@@ -377,15 +331,13 @@
                     confetti.style.animationDelay = Math.random() * 1 + 's';
                     confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
                     
-                    // THIS IS THE FIXED LINE
                     confettiContainer.appendChild(confetti);
                     
-                    // Remove confetti after animation
                     setTimeout(() => {
                         confetti.remove();
                     }, 5000);
                 }
-            }, 400); // Slightly slower on mobile
+            }, 400);
         }
 
         function startHearts() {
@@ -398,14 +350,12 @@
                 
                 heartsContainer.appendChild(heart);
                 
-                // Remove heart after animation
                 setTimeout(() => {
                     heart.remove();
                 }, 8000);
-            }, 800); // Reduced frequency for mobile
+            }, 800);
         }
 
-        // Add some sparkle effect to the button
         lightBtn.addEventListener('mouseover', () => {
             lightBtn.style.transform = 'scale(1.05)';
         });
@@ -414,7 +364,6 @@
             lightBtn.style.transform = 'scale(1)';
         });
 
-        // Close letter when clicking outside (optional)
         letterSection.addEventListener('click', (e) => {
             if (e.target === letterSection) {
                 letterSection.classList.add('hidden');
